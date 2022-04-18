@@ -3,15 +3,15 @@ const incrementRef = document.querySelector('button[data-action="increment"]');
 const valueRef = document.querySelector('#value');
 let counterValue = 0;
 
-const decreaseValue = () => {
+const onDecrementRefClick = () => {
     counterValue -= 1;
     valueRef.textContent = counterValue;
 }
 
-const increaseValue = () => {
+const onIncrementRefClick = () => {
     counterValue += 1;
     valueRef.textContent = counterValue;
 }
 
-decrementRef.addEventListener('click', decreaseValue);
-incrementRef.addEventListener('click', increaseValue);
+decrementRef.addEventListener('click', onDecrementRefClick);
+incrementRef.addEventListener('click', onIncrementRefClick);
