@@ -13,6 +13,10 @@ function onSubmit(event) {
         return alert("Please fill in all fields!");
     }
 
-    console.log(`Login: ${email.value}, Password: ${password.value}`);
+    const inputData = {};
+    inputData.login = email.value;
+    inputData.password = password.value;
+    
+    console.log(inputData);
     event.currentTarget.reset();
 }
