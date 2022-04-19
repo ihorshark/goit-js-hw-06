@@ -6,11 +6,11 @@ const bodyRef = document.querySelector('body');
 const bgcSpanRef = document.querySelector('.color')
 const buttonRef = document.querySelector('.change-color');
 
-const onButtonRefClick = event => {
+buttonRef.addEventListener('click', onButtonRefClick)
+
+function onButtonRefClick() {
   const color = getRandomHexColor();
 
   bodyRef.style.backgroundColor = color;
   bgcSpanRef.textContent = color;
 }
-
-buttonRef.addEventListener('click', onButtonRefClick)

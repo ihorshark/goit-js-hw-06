@@ -6,15 +6,13 @@ const numberOfCategories = (categories) => {
     console.log('');
 }
 
-numberOfCategories(categoriesRef);
-
-
 const itemsLog = (item) => {
     item.forEach(category => {
         console.log('Category: ', category.firstElementChild.textContent);
         console.log('Elements : ', category.lastElementChild.children.length);
         console.log('');
-})
+    })
 }
 
+numberOfCategories(categoriesRef);
 itemsLog(categoryRef);
